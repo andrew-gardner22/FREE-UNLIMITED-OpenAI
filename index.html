@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Free Unlimited OpenAI API with Puter.js</title>
+
+  <!-- Puter.js -->
+  <script src="https://js.puter.com/v2/"></script>
+
+  <!-- Highlight.js CSS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+
+  <!-- Highlight.js JS -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js">
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      hljs.highlightAll();
+    });
+  </script>
+
+  <style>
+    /* Dark theme base */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #0d1117; /* github-dark background */
+      color: #c9d1d9; /* light text */
+    }
+    
+    header {
+      background: linear-gradient(135deg, #2388ff, #0969da);
+      color: white;
+      padding: 40px 20px;
+      position: relative;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(20, 20, 20, 0.7);
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+    
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #cdd9e5;
+    }
+    
+    .github-link {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 0.9rem;
+      background: #21262d;
+      color: #58a6ff;
+      padding: 6px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+      transition: background 0.3s;
+    }
+    
+    .github-link:hover {
+      background: #2c313a;
+      transform: scale(1.075);
+    }
+    
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #161b22;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(20, 20, 20, 0.8);
+    }
+    
+    h2, h4 {
+      color: #58a6ff;
+    }
+    
+    section {
+      margin-bottom: 40px;
+    }
+    
+    pre {
+      position: relative;
+      background-color: #0d1117; /* match github-dark */
+      padding: 16px;
+      border-left: 4px solid #2388ff;
+      overflow-x: auto;
+      border-radius: 6px;
+      margin-top: 10px;
+      color: #c9d1d9;
+      font-family: Consolas, monospace;
+      font-size: 0.95rem;
+    }
+    
+    .copy-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      padding: 5px 10px;
+      font-size: 0.8rem;
+      background: #2388ff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+      user-select: none;
+    }
+    
+    .copy-btn:hover {
+      background: #0969da;
+    }
+    
+    footer {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 0.9rem;
+      color: #8b949e;
+    }
+    
+    footer a {
+      color: #58a6ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 5px;
+      font-family: Consolas, monospace;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Free Unlimited OpenAI Access</h1>
+    <p>
+      A tutorial that shows you how to use <strong>Puter.js</strong> to access
+      OpenAI API models like GPT-4o, DALL·E, and more — for free, no API key or
+      server needed.
+    </p>
+    <a class="github-link"
+      href="https://github.com/andrew-gardner22/FREE-UNLIMITED-OpenAI"
+      target="_blank" rel="noopener">⭐ GitHub Repo</a>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Getting Started</h2>
+      <p>Just include the script below in your HTML to start using Puter.js:</p>
+      <pre><button class="copy-btn">Copy</button><code class="language-html">&lt;script src="https://js.puter.com/v2/"&gt;&lt;/script&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>Example 1: Text Generation (GPT-4o)</h2>
+      <p>Use GPT-4o for text generation:</p>
+      <pre><button class="copy-btn">Copy</button><code class="language-javascript">puter.ai.chat("What are the benefits of exercise?")
+  .then(response => {
+    puter.print(response);
+  });</code></pre>
+
+      <p>Full code example:</p>
+      <pre><button class="copy-btn">Copy</button><code class="language-html">&lt;html&gt;
+&lt;body&gt;
+  &lt;script src="https://js.puter.com/v2/"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    puter.ai.chat("What are the benefits of exercise?")
+      .then(response =&gt; {
+        puter.print(response);
+      });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>Example 2: Generate Images with DALL·E 3</h2>
+      <p>Generate images with the <code>puter.ai.txt2img()</code> function:</p>
+      <pre><button class="copy-btn">Copy</button><code class="language-javascript">puter.ai.txt2img("A futuristic cityscape at night")
+  .then(imageElement => {
+    document.body.appendChild(imageElement);
+  });</code></pre>
+
+      <p>Full code example:</p>
+      <pre><button class="copy-btn">Copy</button><code class="language-html">&lt;html&gt;
+&lt;body&gt;
+  &lt;script src="https://js.puter.com/v2/"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    puter.ai.txt2img("A futuristic cityscape at night")
+      .then(imageElement =&gt; {
+        document.body.appendChild(imageElement);
+      });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>Example 3: Analyze Images with GPT-4o Vision</h2>
+      <p>Use GPT-4o Vision to analyze an image:</p>
+      <pre><button class="copy-btn">Copy</button><code class="language-javascript">puter.ai.chat(
+  "What do you see in this image?", 
+  "https://assets.puter.site/doge.jpeg"
+).then(response => {
+  puter.print(response);
+});</code></pre>
+
+      <p>Full code example:</p>
+      <pre><button class="copy-btn">Copy</button><code class="language-html">&lt;html&gt;
+&lt;body&gt;
+  &lt;script src="https://js.puter.com/v2/"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    puter.ai.chat(
+      "What do you see in this image?", 
+      "https://assets.puter.site/doge.jpeg"
+    ).then(response =&gt; {
+      puter.print(response);
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>Example 4: Use Different Models</h2>
+      <p>Specify OpenAI models using the <code>model</code> parameter:</p>
+      <pre><button class="copy-btn">Copy</button><code class="language-javascript">// Using gpt-4.1
+puter.ai.chat("Write a short poem", { model: "gpt-4.1" }).then(response => puter.print(response));
+
+// Using o3-mini
+puter.ai.chat("Write a short poem", { model: "o3-mini" }).then(response => puter.print(response));</code></pre>
+
+      <p>Full code example:</p>
+      <pre><button class="copy-btn">Copy</button><code class="language-html">&lt;html&gt;
+&lt;body&gt;
+  &lt;script src="https://js.puter.com/v2/"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    puter.ai.chat("Write a short poem", { model: "gpt-4.1" }).then(response =&gt; puter.print(response));
+    puter.ai.chat("Write a short poem", { model: "o3-mini" }).then(response =&gt; puter.print(response));
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>Example 5: Stream Responses</h2>
+      <p>Stream responses for long output:</p>
+      <pre><button class="copy-btn">Copy</button><code class="language-javascript">async function streamResponse() {
+  const response = await puter.ai.chat(
+    "Explain the theory of relativity in detail",
+    { stream: true }
+  );
+
+  for await (const part of response) {
+    puter.print(part?.text);
+  }
+}
+streamResponse();</code></pre>
+
+      <p>Full code example:</p>
+      <pre><button class="copy-btn">Copy</button><code class="language-html">&lt;html&gt;
+&lt;body&gt;
+  &lt;script src="https://js.puter.com/v2/"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    async function streamResponse() {
+      const response = await puter.ai.chat(
+        "Explain the theory of relativity in detail",
+        { stream: true }
+      );
+      for await (const part of response) {
+        puter.print(part?.text);
+      }
+    }
+    streamResponse();
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+    <section>
+      <h2>Supported OpenAI Models</h2>
+      <p>The following OpenAI models are supported by <code>Puter.js</code>:</p>
+      <ul>
+        <li><code>gpt-4.1</code></li>
+        <li><code>gpt-4.1-mini</code></li>
+        <li><code>gpt-4.1-nano</code></li>
+        <li><code>gpt-4.5-preview</code></li>
+        <li><code>gpt-4o</code></li>
+        <li><code>gpt-4o-mini</code></li>
+        <li><code>o1</code></li>
+        <li><code>o1-mini</code></li>
+        <li><code>o1-pro</code></li>
+        <li><code>o3</code></li>
+        <li><code>o3-mini</code></li>
+        <li><code>o4-mini</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>That's It!</h2>
+      <p>
+        You now have a free alternative to the OpenAI API using <strong>Puter.js</strong>.
+        This allows you to access <code>GPT-4o</code>, <code>o4</code>, <code>o3-mini</code>,
+        <code>o1-mini</code>, <code>DALL·E</code>, and more — all without needing an API key
+        or a backend. True serverless AI!
+      </p>
+      <h4>If you liked this tutorial, please star my github repo! Happy coding!</h4>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made by <a href="https://github.com/andrew-gardner22" target="_blank"
+        rel="noopener">Andrew Gardner</a></p>
+  </footer>
+
+  <script>
+    // Copy to clipboard
+    document.querySelectorAll('.copy-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const code = button.nextElementSibling.textContent;
+        navigator.clipboard.writeText(code).then(() => {
+          button.textContent = 'Copied!';
+          setTimeout(() => (button.textContent = 'Copy'), 1500);
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
