@@ -19,7 +19,6 @@ puter.ai.chat("What are the benefits of exercise?")
     .then(response => {
         puter.print(response);
     });
-
 ```
 Full code example:
 ```
