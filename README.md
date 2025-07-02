@@ -1,5 +1,7 @@
 # FREE UNLIMITED OpenAI
 A tutorial of how to get free unlimited OpenAI API
+---  
+[Tutorial Website](andrew-garner22.github.io/FREE-UNLIMITED-OpenAI)
 ---
 This tutorial will show you how to use Puter.js to access OpenAI API capabilities for free, without needing an OpenAI API key. Puter.js is completely free and open-source, allowing you to provide your users with powerful AI capabilities without any API keys or usage restrictions. Using Puter.js, you can access GPT-4o, GPT-4.1, GPT-4.5, o1, o3, o4, DALL-E, ... directly from your frontend code without any server-side setup.\
 \
